@@ -12,9 +12,10 @@ import com.sampathsl.storybook.jpa.model.Story;
 import com.sampathsl.storybook.jpa.model.StoryRepository;
 
 @Configuration
+@ComponentScan
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan
+//@PropertySource("application.properties")
 public class StorybookApplication {
 	
 	public static void main(String[] args) {
