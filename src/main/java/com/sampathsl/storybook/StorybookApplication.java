@@ -22,7 +22,7 @@ public class StorybookApplication {
 		SpringApplication.run(StorybookApplication.class, args);
 	}
 	
-	@Bean
+	/*@Bean
 	public CommandLineRunner loadData(StoryRepository storyRepository) {
 		return (args) -> {
 			Story s1 = new Story("test1", "http://google.lk");
@@ -36,6 +36,6 @@ public class StorybookApplication {
 			Story s5 = new Story("test5", "http://listen.lk");
 			storyRepository.save(s5);
 		};
-	}
+	}*/
 	
 }
