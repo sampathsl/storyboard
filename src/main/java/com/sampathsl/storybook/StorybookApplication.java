@@ -1,15 +1,10 @@
 package com.sampathsl.storybook;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import com.sampathsl.storybook.jpa.model.Project;
-import com.sampathsl.storybook.jpa.model.ProjectRepository;
 
 @Configuration
 @ComponentScan
