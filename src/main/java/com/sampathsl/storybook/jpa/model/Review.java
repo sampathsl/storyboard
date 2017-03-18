@@ -1,27 +1,30 @@
 package com.sampathsl.storybook.jpa.model;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Review extends BaseEntity {
 
-	private String rating;
+	private int rating;
 	private String description;
+	@ManyToOne
+	private Project project;
 
 	protected Review() {
 		super();
 	}
 
-	public Review(String rating, String description) {
+	public Review(int rating, String description) {
 		this.rating = rating;
 		this.description = description;
 	}
 
-	public String getRating() {
+	public int getRating() {
 		return rating;
 	}
 
-	public void setRating(String rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 
@@ -31,6 +34,14 @@ public class Review extends BaseEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project story) {
+		this.project = story;
 	}
 
 }

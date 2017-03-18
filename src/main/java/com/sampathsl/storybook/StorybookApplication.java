@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.sampathsl.storybook.jpa.model.Story;
-import com.sampathsl.storybook.jpa.model.StoryRepository;
+import com.sampathsl.storybook.jpa.model.Project;
+import com.sampathsl.storybook.jpa.model.ProjectRepository;
 
 @Configuration
 @ComponentScan
@@ -25,16 +25,16 @@ public class StorybookApplication {
 	/*@Bean
 	public CommandLineRunner loadData(StoryRepository storyRepository) {
 		return (args) -> {
-			Story s1 = new Story("test1", "http://google.lk");
-			storyRepository.save(s1);
-			Story s2 = new Story("test2", "http://yahoo.lk");
-			storyRepository.save(s2);
-			Story s3 = new Story("test3", "http://gossip.lk");
-			storyRepository.save(s3);
-			Story s4 = new Story("test4", "http://dance.lk");
-			storyRepository.save(s4);
-			Story s5 = new Story("test5", "http://listen.lk");
-			storyRepository.save(s5);
+			Project p1 = new Project("project 1", "http://google.lk");
+			storyRepository.save(p1);
+			Project p2 = new Project("project 2", "http://yahoo.lk");
+			storyRepository.save(p2);
+			Project p3 = new Project("project 3", "http://gossip.lk");
+			storyRepository.save(p3);
+			Project p4 = new Project("project 4", "http://dance.lk");
+			storyRepository.save(p4);
+			Project p5 = new Project("project 5", "http://listen.lk");
+			storyRepository.save(p5);
 		};
 	}*/
 	
