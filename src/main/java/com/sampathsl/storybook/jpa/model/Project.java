@@ -10,54 +10,69 @@ import javax.persistence.OneToMany;
 @Entity
 public class Project extends BaseEntity {
 
-	private String title;
-	private String url;
-	@OneToMany( mappedBy = "project" , cascade = CascadeType.ALL)
-	private List<Review> reviews;
+    private String title;
+    private int priority;
+    private String url;
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<Review> reviews;
 
-	protected Project() {
-		super();
-		reviews = new ArrayList<>();
-	}
-	
-	public void addReview(Review review) {
-		review.setProject(this);
-		reviews.add(review);
-	}
+    protected Project() {
+        super();
+        reviews = new ArrayList<>();
+    }
 
-	public Project(String title, String url) {
-		this();
-		this.title = title;
-		this.url = url;
-	}
+    public void addReview(Review review) {
+        review.setProject(this);
+        reviews.add(review);
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public Project(String title, int priority, String url) {
+        this();
+        this.title = title;
+        this.priority = priority;
+        this.url = url;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public List<Review> getReviews() {
-		return reviews;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public void setReviews(List<Review> reviews) {
-		this.reviews = reviews;
-	}
+    public List<Review> getReviews() {
+        return reviews;
+    }
 
-	@Override
-	public String toString() {
-		return "Story [title=" + title + ", url=" + url + ", reviews=" + reviews + "]";
-	}
-	
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "title='" + title + '\'' +
+                ", priority=" + priority +
+                ", url='" + url + '\'' +
+                ", reviews=" + reviews +
+                '}';
+    }
+
 }

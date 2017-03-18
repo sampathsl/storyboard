@@ -31,8 +31,8 @@ public class DataLoader implements ApplicationRunner {
         IntStream.range(0, 100).forEach(i -> {
             String template = projectTemplate[i % projectTemplate.length];
             String buzzWord = buzzWords[i % buzzWords.length];
-            String project = String.format(template, buzzWord);
-            Project p = new Project(project, "http://www.todowork.com/" + project);
+            String project = String.format(template.replace(" ", ""), buzzWord.replace(" ", "-"));
+            Project p = new Project(project, i % 5, "http://www.todowork.com/" + project.toLowerCase());
             p.addReview(new Review(i % 5, String.format("Good work and need more features - %s", buzzWord)));
             projectList.add(p);
         });

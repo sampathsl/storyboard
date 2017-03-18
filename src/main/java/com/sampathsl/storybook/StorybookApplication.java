@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 @SpringBootApplication
 @EnableAutoConfiguration
-//@PropertySource("application.properties")
 public class StorybookApplication {
 	
 	public static void main(String[] args) {
