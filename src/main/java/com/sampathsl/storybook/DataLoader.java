@@ -34,14 +34,14 @@ public class DataLoader implements ApplicationRunner {
         String[] buzzWords = {"ABC pvt Ltd", "Amaya GMBH", "Ocean pvt Ltd", "Zeez Coparation", "Niki Holdings"};
 
         List<User> users = Arrays.asList(
-                new User("AF","AL","AU","AP",new String[]{"ROLE_ADMIN","ROLE_USER"}),
-                new User("BF","BL","BU","BP",new String[]{"ROLE_USER"}),
-                new User("CF","CL","CU","CP",new String[]{"ROLE_USER"}),
-                new User("DF","DL","DU","DP",new String[]{"ROLE_USER"}),
-                new User("EF","EL","EU","EP",new String[]{"ROLE_USER"}),
-                new User("FF","FL","FU","FP",new String[]{"ROLE_USER"}),
-                new User("GF","GL","GU","GP",new String[]{"ROLE_USER"}),
-                new User("HF","HL","HU","HP",new String[]{"ROLE_USER"})
+                new User("AF","AF","AF","AP",new String[]{"ROLE_ADMIN","ROLE_USER"}),
+                new User("BF","BF","BF","BP",new String[]{"ROLE_USER"}),
+                new User("CF","CF","CF","CP",new String[]{"ROLE_USER"}),
+                new User("DF","DF","DF","DP",new String[]{"ROLE_USER"}),
+                new User("EF","EF","EF","EP",new String[]{"ROLE_USER"}),
+                new User("FF","FF","FF","FP",new String[]{"ROLE_USER"}),
+                new User("GF","GF","GF","GP",new String[]{"ROLE_USER"}),
+                new User("HF","HF","HF","HP",new String[]{"ROLE_USER"})
         );
 
         userRepository.save(users);

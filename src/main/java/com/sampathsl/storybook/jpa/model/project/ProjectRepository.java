@@ -13,6 +13,7 @@ public interface ProjectRepository extends CrudRepository<Project, Long>, Paging
 
     @RestResource(rel = "title-contains" , path = "projectTitle")
 	Page<Project> findByTitle(@Param("title") String title, Pageable page);
+
     @RestResource(rel = "priority" , path = "projectPriority")
 	Page<Project> findByPriority(@Param("priority") Integer priority, Pageable page);
 
