@@ -1,12 +1,19 @@
 package com.sampathsl.storybook.jpa.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Review extends BaseEntity {
 
 	private int rating;
+	@NotNull
+    @NotBlank(message = "description can't be empty!")
+	@Size(min = 2, max = 140)
 	private String description;
 	@ManyToOne
 	private Project project;
