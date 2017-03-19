@@ -1,5 +1,8 @@
-package com.sampathsl.storybook.jpa.model;
+package com.sampathsl.storybook.jpa.model.Review;
 
+import com.sampathsl.storybook.jpa.model.BaseEntity;
+import com.sampathsl.storybook.jpa.model.user.User;
+import com.sampathsl.storybook.jpa.model.project.Project;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.Entity;
@@ -15,8 +18,12 @@ public class Review extends BaseEntity {
     @NotBlank(message = "description can't be empty!")
 	@Size(min = 2, max = 140)
 	private String description;
+
 	@ManyToOne
 	private Project project;
+
+    @ManyToOne
+    private User user;
 
 	protected Review() {
 		super();
@@ -51,4 +58,11 @@ public class Review extends BaseEntity {
 		this.project = story;
 	}
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
