@@ -1,2 +1,2 @@
 # Project Story Board
-Simple story board application
+Simple Spring boot REST story board application
