@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @RepositoryEventHandler(Review.class)
-public class ReviewEventHandler {
+public final class ReviewEventHandler {
 
     @Autowired
     private UserRepository userRepository;

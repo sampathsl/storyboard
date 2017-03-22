@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Review extends BaseEntity {
+public final class Review extends BaseEntity {
 
 	private int rating;
 	@NotNull

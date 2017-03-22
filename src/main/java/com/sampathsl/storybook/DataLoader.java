@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 @Component
-public class DataLoader implements ApplicationRunner {
+public final class DataLoader implements ApplicationRunner {
 
     @Autowired
     private ProjectRepository projectRepository;

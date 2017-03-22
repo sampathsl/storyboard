@@ -11,7 +11,7 @@ import javax.persistence.Entity;
  * Created by SAMPATH on 3/19/2017.
  */
 @Entity
-public class User extends BaseEntity {
+public final class User extends BaseEntity {
 
     public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
     private String firstName;

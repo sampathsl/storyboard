@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Project extends BaseEntity {
+public final class Project extends BaseEntity {
 
     @NotNull
     @NotBlank(message = "title can't be empty!")
